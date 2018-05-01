@@ -1,0 +1,87 @@
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>latex</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
+    <style>
+    h2 {text-align:center}
+    </style>
+  </head>
+  <body>
+    <div class="header"></div>
+    <h2 class="main"> Інтеграли </h2>
+      <blockquote>
+        <h3> Завдання 1. </h3>
+          Знайти невизначений інтеграл: $$ \int x  \sin^2  x  dx . $$ 
+          <h3>Розв'язання:</h3>
+          <p>
+            Використовуємо формулу інтегрування частинами:
+             $$ \int udv = uv - \int vdu . $$
+
+            Для цього позначимо: 
+            $$ u = x ,$$ $$ dv = \sin^2 x dx . $$
+
+            Тоді: 
+            $$ du = dx ,$$ $$ v = \int dv = \int \sin^2 x dx . $$ 
+
+            Для обчислення останнього інтеграла скористаємося формулою: 
+            $$ \sin^2 x = \frac {1 - \cos 2x} {2} . $$
+
+            Отримаємо: 
+            $$ v = \int \frac {1 - \cos 2x} {2} dx = \frac {1} {2} \left( x - \frac {\sin 2x} {2} \right) = \frac {x} {2} - \frac {\sin 2x} {4} . $$
+
+            Отже: 
+            $$ \int x  \sin^2  x  dx = x \left( \frac {x} {2} - \frac {\sin 2x} {4} \right) - \int \left( \frac {x} {2} - \frac {\sin 2x} {4} \right) dx = $$ 
+            $$ = \frac {x^2} {2} - \frac {x \sin 2x} {4} - \frac {x^2} {4} - \frac {\cos 2x} {8} + C = \frac {x^2} {4} - \frac {x \sin 2x} {4} - \frac {\cos 2x} {8} + C . $$
+
+            Диференціюючи отриманий вираз, зробимо перевірку: 
+            $$ \qquad \left( \frac {x^2} {4} - \frac {x \sin 2x} {4} - \frac {\cos 2x} {8} + C \right)' = \frac {2x} {4} - \frac {\sin 2x} {4} - \frac {x 2 \cos 2x} {4} + \frac {2 \sin 2x} {8} + 0 = $$
+            $$ = \frac {x - x \cos 2x} {2} = x \frac {1 - \cos 2x} {2} = x \sin^2 x .$$
+
+            Отже, інтеграл знайдено вірно.
+            <br><br>
+            <h3>Відповідь:</h3>
+            $$ \int x  \sin^2  x  dx = \frac {x^2} {4} - \frac {x \sin 2x} {4} - \frac {\cos 2x} {8} + C . $$
+          </p>
+        <h3> Завдання 2. </h3> 
+          Знайти визначений інтеграл: $$ \int_{0}^{2\pi} \sin^4 \left( \frac {x} {4} \right) \cos^4 \left( \frac {x} {4} \right) dx . $$ 
+          <h3>Розв'язання:</h3>
+          <p>
+            Скористаємося тригонометричною формулою синуса подвійного кута. Запишемо інтеграл у вигляді:
+
+            $$ \int_{0}^{2\pi} \left( \sin \left( \frac {x} {4} \right) \cos \left( \frac {x} {4} \right) \right) ^4 dx = $$
+
+            $$ = \int_{0}^{2\pi} \left( \frac {1} {2} \sin \left( \frac {x} {2} \right) \right) ^4 dx = \frac {1} {16} \int_{0}^{2\pi} \left( \sin^2 \left( \frac {x} {2} \right) \right) ^2 dx . $$
+
+            Скористаємося тригонометричною формулою пониження ступеня. Tоді:
+
+            $$ \frac {1} {16} \int_{0}^{2\pi} \left( \frac {1 - \cos x} {2} \right)^2 dx = $$
+           
+            $$ = \frac {1} {64} \int_{0}^{2\pi} \left( 1 - 2 \cos x + \cos^2 x \right) dx = $$
+            
+            $$ = \frac {1} {64} \int_{0}^{2\pi} \left( 1 - 2 \cos x + \frac {1 + \cos 2x} {2} \right) dx = $$
+           
+            $$ = \frac {1} {64} \int_{0}^{2\pi} \left( \frac {1} {2} - 2 \cos x + \frac {\cos 2x} {2} \right) dx = $$
+
+            $$ = \frac {1} {64} \left( \frac {x} {2} - 2 \sin x + \frac {\sin 2x} {4} \right) \Bigl |_{0}^{2\pi} = $$
+
+            $$ = \frac {1} {64} \left( \frac {2\pi} {2} - 2 \sin 2\pi + \frac {\sin 4\pi} {4} \right) = \frac {\pi} {64} . $$
+
+            <h3>Відповідь:</h3>
+
+            $$ \int_{0}^{2\pi} \sin^4 \left( \frac {x} {4} \right) \cos^4 \left( \frac {x} {4} \right) dx = \frac {\pi} {64} . $$
+
+          </p>
+         
+    </blockquote>
+  </body>
+</html>
