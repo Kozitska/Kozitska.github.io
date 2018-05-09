@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Laba5</title>
+  
+  
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      html {
+  min-width: 15em;
+}
+svg {
+  display: block;
+  overflow: visible;
+  margin: 0 auto;
+  min-width: 15em;
+  min-height: 15em;
+  width: 90vmin;
+  height: 90vmin;
+}
+.controls {
+  font: 1.125em trebuchet ms, sans-serif;
+}
+.controls var {
+  font: 700 italic 1.125em serif;
+}
+.initial {
+  opacity: .32;
+}
+.dir--x .sqb:nth-child(even), .dir--y .sqb:nth-child(odd) {
+  fill: #4ca454;
+}
+.coord-syst {
+  stroke: #000;
+}
+.coord-syst path {
+  stroke-width: 4;
+}
+.dir--x .coord-syst .axis--x, .dir--y .coord-syst .axis--y {
+  fill: #4ca454;
+  stroke: #4ca454;
+}
+.dir--x .coord-syst .axis--y, .dir--y .coord-syst .axis--x {
+  fill: #4ca454;
+  stroke: #4ca454;
+}
+.coord-syst text {
+  font: italic 2em serif;
+}
+.conn, .arc {
+  fill: darkorange;
+  stroke: darkorange;
+  stroke-width: 2;
+}
+.infopop {
+  position: absolute;
+  transform: scale(0);
+}
+input[type='radio'], input[type='radio'] + label {
+  cursor: pointer;
+}
+input[type='range'] {
+  display: block;
+  padding: 0;
+  width: 14em;
+  height: 2em;
+  background: transparent;
+  font-size: 1em;
+  cursor: pointer;
+}
+input[type='range'], input[type='range']::-webkit-slider-runnable-track, input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  width: 14em;
+  height: .375em;
+  background: #ff7505;
+}
+input[type='range']::-moz-range-track {
+  width: 14em;
+  height: .375em;
+  background: #ff7505;
+}
+input[type='range']::-ms-track {
+  width: 14em;
+  height: .375em;
+  background: #ff7505;
+  color: transparent;
+}
+input[type='range']::-ms-fill-lower, input[type='range']::-ms-tooltip {
+  display: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  margin-top: -.3125em;
+  border: none;
+  border-radius: 0;
+  width: 1em;
+  height: 1em;
+  box-shadow: inset 0 0 0 3px #333;
+  background: #ccc;
+}
+input[type='range']::-moz-range-thumb {
+  border: none;
+  border-radius: 0;
+  width: 1em;
+  height: 1em;
+  box-shadow: inset 0 0 0 3px #333;
+  background: #ccc;
+}
+input[type='range']::-ms-thumb {
+  border: none;
+  border-radius: 0;
+  width: 1em;
+  height: 1em;
+  box-shadow: inset 0 0 0 3px #333;
+  background: #ccc;
+}
+input[type='range']:focus {
+  outline: solid 0 transparent;
+}
+input[type='range']:focus::-webkit-slider-thumb {
+  background: #4ca454;
+}
+input[type='range']:focus::-moz-range-thumb {
+  background: #4ca454;
+}
+input[type='range']:focus::-ms-thumb {
+  background: #4ca454;
+}
+.codebox {
+  padding: .5em;
+  background: #1d1f21;
+  font: 600 1.375em monospace;
+}
+.token--property {
+  color: #c9beca;
+}
+.token--punctuation {
+  color: #ccc;
+}
+.token--value {
+  color: #e4aea0;
+}
+.token--function {
+  color: #8cca92;
+}
+.token--argument {
+  color: #fff;
+}
+.token--number {
+  color: #edb982;
+}
+.token--unit {
+  color: #da9083;
+}
+@media (min-aspect-ratio: 1 / 1) {
+  .panel:first-of-type {
+    float: right;
+  }
+}
+@media (max-aspect-ratio: 1 / 1) and (min-width: 30em) {
+  .controls {
+    overflow: hidden;
+  }
+  .sub {
+    float: left;
+  }
+}
+@media (max-aspect-ratio: 1 / 1) and (min-width: 45em) {
+  .controls, .codebox {
+    float: left;
+  }
+  .panel:first-of-type {
+    overflow: hidden;
+  }
+}
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  <section class='panel'>
+  <section class='controls'>
+    <fieldset class='sub'>
+      <legend>
+        Значення
+        <div class='infopop'>the axis along which we the element</div>
+      </legend>
+
+      <input name='axis' type='radio' id='x' 
+             class='ac' checked/>
+      <label for='x'><var>x</var> </label>
+
+      <input name='axis' type='radio' id='y' 
+             class='ac'/>
+      <label for='y'><var>y</var> </label>
+    </fieldset>
+    
+    <section class='sub'>
+      <label for='a'>
+        Кут
+        <div class='infopop'>the angle</div>
+      </label>
+      <input type='range' id='a' min='-89' max='89'/>
+    </section>
+  </section>
+  
+  <pre class='codebox'>transform: X(0deg)</pre>
+</section>
+
+<section class='panel'>
+  <svg viewbox='-512 -512 1024 1024'>
+    <defs>
+      <path id='sqb' 
+            d='M-256 -256 L256 -256 
+               L240 -240 L-240 -240z' />
+    </defs>
+
+    <g class='initial'>
+      <g class='square'>
+        <use class='sqb' 
+             xlink:href='#sqb' />
+        <use class='sqb' transform='rotate(90)' 
+             xlink:href='#sqb' />
+        <use class='sqb' transform='rotate(180)'
+             xlink:href='#sqb' />
+        <use class='sqb' transform='rotate(270)'
+             xlink:href='#sqb' />
+      </g>
+      <g class='coord-syst'>
+        <path d='M-500 0 L490 0
+                 L485 -10 L500 0 L485 10 L490 0
+                 M0 -500 L0 490
+                 L-10 485 L0 500 L10 485 L0 490'/>
+        <text x='500' y='32'
+              text-anchor='end'>x</text>
+        <text x='16' y='500'>y</text>
+      </g>
+    </g>
+    <g class='final dir--x'>
+      <g class='square'>
+        <use class='sqb' 
+             xlink:href='#sqb' />
+        <use class='sqb' transform='rotate(90)' 
+             xlink:href='#sqb' />
+        <use class='sqb' transform='rotate(180)'
+             xlink:href='#sqb' />
+        <use class='sqb' transform='rotate(270)'
+             xlink:href='#sqb' />
+      </g>
+      <g class='coord-syst'>
+        <path class='axis axis--x' 
+              d='M-500 0 L490 0
+                 L485 -10 L500 0 L485 10 L490 0'/>
+        <path class='axis axis--y' 
+              d='M0 -500 L0 490
+                 L-10 485 L0 500 L10 485 L0 490'/>
+        <text class='axis--x' x='500' y='32'
+              text-anchor='end'>x</text>
+        <text class='axis--y' x='16' y='500'>y</text>
+      </g>
+    </g>
+    
+    <circle cx='192' cy='192' class='point initial' r='8' />
+    <circle cx='192' cy='192' class='point final' r='8' />
+    <path class='conn' d='M192 192 L192 192' />
+    
+    <path class='arc' d='' />
+  </svg>
+</section>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+
+    <script src="js/index2.js"></script>
+
+</body>
+</html>
