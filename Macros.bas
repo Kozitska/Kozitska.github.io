@@ -1,41 +1,89 @@
 Attribute VB_Name = "NewMacros"
-Sub Ìàêðîñ5()
-'Ìàêðîñ 5
-'Î÷èùàºìî ôîðìàò
+Sub Макрос1()
+'Макрос із кнопкою Ctrl + D
+'Очищаємо формат
     Selection.WholeStory
     Selection.Find.ClearFormatting
     Selection.Find.Replacement.ClearFormatting
-'Ôóíêö³ÿ ïîøóêó
+    
+    
+     ' ЗАМІНА НЕРОЗРИВНОГО ПРОБІЛУ НА ЗВИЧАЙНИЙ
+
+'Функція пошуку
     With Selection.Find
-        .Text = " {1;}([.,:;\!\?])" 'Çíàõîäèìî ñèìâîëè
-        .Replacement.Text = "\1"    'Çì³íþºìî
-        .Forward = True             'îáîâ*ÿçêîâî true
+        .Text = "^s" 'Знаходимо символи
+        .Replacement.Text = " "     'Змінюємо
+        .Forward = True             'обов*язково true
         .Wrap = wdStore
         .Format = False
         .MatchCase = False
         .MatchWholeWord = False
         .MatchAllWordForms = False
         .MatchSoundsLike = False
-        .MatchWildcards = True      'îáîâ*ÿçêîâî true
+        .MatchWildcards = True      'обов*язково true
     End With
-'Ïîâòîðþºìî äëÿ âñüîãî òåêñòó
+'Повторюємо для всього тексту
+    Selection.Find.Execute Replace:=wdReplaceAll
+    Selection.MoveLeft Unit:=wdCharacter, Count:=1
+    
+    
+    ' ВИДАЛЕННЯ ПРОБІЛІВ ПЕРЕД ЗНАКАМИ ПУНКТУАЦІЇ
+    
+'Функція пошуку
+    With Selection.Find
+        .Text = " {1;}([.,:;\!\?])" 'Знаходимо символи
+        .Replacement.Text = "\1"    'Змінюємо
+        .Forward = True             'обов*язково true
+        .Wrap = wdStore
+        .Format = False
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchAllWordForms = False
+        .MatchSoundsLike = False
+        .MatchWildcards = True      'обов*язково true
+    End With
+'Повторюємо для всього тексту
+    Selection.Find.Execute Replace:=wdReplaceAll
+    Selection.MoveLeft Unit:=wdCharacter, Count:=1
+   
+    
+    ' СТАВИМО ПРОБІЛ ПІСЛЯ ЗНАКУ ПУНКТУАЦІЇ
+    
+    'Функція пошуку
+    With Selection.Find
+        .Text = "([.,:;\!\?])" 'Знаходимо символи
+        .Replacement.Text = "\1 "    'Змінюємо
+        .Forward = True             'обов*язково true
+        .Wrap = wdStore
+        .Format = False
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchAllWordForms = False
+        .MatchSoundsLike = False
+        .MatchWildcards = True      'обов*язково true
+    End With
+'Повторюємо для всього тексту
     Selection.Find.Execute Replace:=wdReplaceAll
     Selection.MoveLeft Unit:=wdCharacter, Count:=1
 
-'Ôóíêö³ÿ ïîøóêó
+
+    ' ВИДАЛЕННЯ ЗАЙВИХ ПРОБІЛІВ, ЩО ПОВТОРЮЮТЬСЯ
+
+'Функція пошуку
     With Selection.Find
-        .Text = " {2;}"              'çíàõîäèìî 2 ³ á³ëüøå ïðîá³ë³â
-        .Replacement.Text = " "      'çì³íþºìî íà îäèí ïðîá³ë
-        .Forward = True              'îáîâ*ÿçêîâî true
+        .Text = " {2;}"              'знаходимо 2 і більше пробілів
+        .Replacement.Text = " "      'змінюємо на один пробіл
+        .Forward = True              'обов*язково true
         .Wrap = wdQuestion
         .Format = False
         .MatchCase = False
         .MatchWholeWord = False
         .MatchAllWordForms = False
         .MatchSoundsLike = False
-        .MatchWildcards = True       'îáîâ*ÿçêîâî true
+        .MatchWildcards = True       'обов*язково true
     End With
-'Ïîâòîðþºìî äëÿ âñüîãî òåêñòó
+'Повторюємо для всього тексту
     Selection.Find.Execute Replace:=wdReplaceAll
     Selection.MoveRight Unit:=wdCharacter, Count:=1
+    
 End Sub
