@@ -1,0 +1,764 @@
+{
+  "_comment": "Empty ontology for WebVOWL Editor [Additional Information added by WebVOWL Exporter Version: 1.1.4]",
+  "header": {
+    "languages": [
+      "en"
+    ],
+    "baseIris": [
+      "http://www.w3.org/2000/01/rdf-schema"
+    ],
+    "iri": "http://visualdataweb.org/newOntology/",
+    "title": {
+      "en": "New ontology"
+    },
+    "description": {
+      "en": "New ontology description"
+    }
+  },
+  "namespace": [],
+  "settings": {
+    "global": {
+      "zoom": "0.53",
+      "translation": [
+        415.34,
+        433.59
+      ],
+      "paused": false
+    },
+    "gravity": {
+      "classDistance": 200,
+      "datatypeDistance": 120
+    },
+    "filter": {
+      "checkBox": [
+        {
+          "id": "datatypeFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "objectPropertyFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "subclassFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "disjointFilterCheckbox",
+          "checked": true
+        },
+        {
+          "id": "setoperatorFilterCheckbox",
+          "checked": false
+        }
+      ],
+      "degreeSliderValue": "0"
+    },
+    "modes": {
+      "checkBox": [
+        {
+          "id": "pickandpinModuleCheckbox",
+          "checked": false
+        },
+        {
+          "id": "nodescalingModuleCheckbox",
+          "checked": true
+        },
+        {
+          "id": "compactnotationModuleCheckbox",
+          "checked": false
+        },
+        {
+          "id": "colorexternalsModuleCheckbox",
+          "checked": true
+        }
+      ],
+      "colorSwitchState": false
+    }
+  },
+  "class": [
+    {
+      "id": "Class1",
+      "type": "owl:Class"
+    },
+    {
+      "id": "NodeId2",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "NodeId3",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Class5",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Class6",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Class7",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Class8",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Class10",
+      "type": "owl:Class"
+    },
+    {
+      "id": "NodeId11",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Class12",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Class13",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Class14",
+      "type": "owl:Class"
+    },
+    {
+      "id": "NodeId15",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Class16",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Class17",
+      "type": "owl:Class"
+    },
+    {
+      "id": "NodeId18",
+      "type": "rdfs:Datatype"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "Class1",
+      "iri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Програміст",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Програміст",
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        576.83,
+        111.78
+      ],
+      "pinned": true
+    },
+    {
+      "id": "NodeId2",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Datatype",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema#",
+      "label": "Стілець",
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        591.19,
+        -173.52
+      ]
+    },
+    {
+      "id": "NodeId3",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Datatype",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema#",
+      "label": "Кава",
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        757.94,
+        -103.9
+      ]
+    },
+    {
+      "id": "Class5",
+      "iri": "http://visualdataweb.org/newOntology/Монітор",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Монітор",
+      "pos": [
+        176.73,
+        311.93
+      ]
+    },
+    {
+      "id": "Class6",
+      "iri": "http://visualdataweb.org/newOntology/Системний_блок",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Системний блок",
+      "pos": [
+        71.88,
+        768.81
+      ],
+      "pinned": true
+    },
+    {
+      "id": "Class7",
+      "iri": "http://visualdataweb.org/newOntology/Клавіатура",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Клавіатура",
+      "pos": [
+        -174.71,
+        331.57
+      ],
+      "pinned": true
+    },
+    {
+      "id": "Class8",
+      "iri": "http://visualdataweb.org/newOntology/Мишка",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Мишка",
+      "pos": [
+        305.69,
+        435.52
+      ]
+    },
+    {
+      "id": "Class10",
+      "iri": "http://visualdataweb.org/newOntology/Навушники",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Навушники",
+      "pos": [
+        542.2,
+        542.59
+      ],
+      "pinned": true
+    },
+    {
+      "id": "NodeId11",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Datatype",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema#",
+      "label": "Принтер",
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        -137.82,
+        876.94
+      ]
+    },
+    {
+      "id": "Class12",
+      "iri": "http://visualdataweb.org/newOntology/Wi-Fi_роутер",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Wi-Fi роутер",
+      "pos": [
+        563.09,
+        884.27
+      ],
+      "pinned": true
+    },
+    {
+      "id": "Class13",
+      "iri": "http://visualdataweb.org/newOntology/Електрика",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Електрика",
+      "pos": [
+        1121.63,
+        727.11
+      ],
+      "pinned": true
+    },
+    {
+      "id": "Class14",
+      "iri": "http://visualdataweb.org/newOntology/Кактус",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Кактус",
+      "pos": [
+        222.85,
+        -90.16
+      ]
+    },
+    {
+      "id": "NodeId15",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Datatype",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema#",
+      "label": "Стіл",
+      "pos": [
+        130.67,
+        -333.24
+      ]
+    },
+    {
+      "id": "Class16",
+      "iri": "http://visualdataweb.org/newOntology/Смартфон",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Смартфон",
+      "pos": [
+        781.81,
+        525.21
+      ]
+    },
+    {
+      "id": "Class17",
+      "iri": "http://visualdataweb.org/newOntology/Лампа",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Лампа",
+      "pos": [
+        989.18,
+        311.73
+      ]
+    },
+    {
+      "id": "NodeId18",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Datatype",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema#",
+      "label": "Стеля",
+      "pos": [
+        1194.96,
+        161.08
+      ]
+    }
+  ],
+  "property": [
+    {
+      "id": "datatypeProperty1",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "datatypeProperty2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "objectProperty4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "objectProperty5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "objectProperty6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "objectProperty7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "objectProperty9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "objectProperty8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "objectProperty11",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "datatypeProperty12",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "objectProperty15",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "objectProperty16",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "objectProperty17",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "objectProperty18",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "objectProperty19",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "datatypeProperty20",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "objectProperty21",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "objectProperty22",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "objectProperty23",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "objectProperty24",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "datatypeProperty25",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "objectProperty26",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "objectProperty27",
+      "type": "owl:ObjectProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "datatypeProperty1",
+      "iri": "http://visualdataweb.org/newOntology/Сидіти",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Сидіти",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "Class1",
+      "range": "NodeId2",
+      "pos": [
+        585.01,
+        -50.84
+      ]
+    },
+    {
+      "id": "datatypeProperty2",
+      "iri": "http://visualdataweb.org/newOntology/Пити",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Пити",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "Class1",
+      "range": "NodeId3",
+      "pos": [
+        679.26,
+        -10.2
+      ]
+    },
+    {
+      "id": "objectProperty4",
+      "iri": "http://visualdataweb.org/newOntology/Дивитись",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Дивитись",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class1",
+      "range": "Class5",
+      "pos": [
+        376.78,
+        211.86
+      ]
+    },
+    {
+      "id": "objectProperty5",
+      "iri": "http://visualdataweb.org/newOntology/Вивід_графічних_даних",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Вивід графічних даних",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class6",
+      "range": "Class5",
+      "pos": [
+        124.3,
+        540.37
+      ]
+    },
+    {
+      "id": "objectProperty6",
+      "iri": "http://visualdataweb.org/newOntology/Опрацювання_даних",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Опрацювання даних",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class7",
+      "range": "Class6",
+      "pos": [
+        -51.42,
+        550.19
+      ]
+    },
+    {
+      "id": "objectProperty7",
+      "iri": "http://visualdataweb.org/newOntology/Ввід_даних",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Ввід даних",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class1",
+      "range": "Class7",
+      "pos": [
+        201.06,
+        221.68
+      ]
+    },
+    {
+      "id": "objectProperty9",
+      "iri": "http://visualdataweb.org/newOntology/Мишка",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Керування ПК",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class1",
+      "range": "Class8",
+      "pos": [
+        441.26,
+        273.65
+      ]
+    },
+    {
+      "id": "objectProperty8",
+      "iri": "http://visualdataweb.org/newOntology/Передача_вказівок",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Передача вказівок",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class8",
+      "range": "Class6",
+      "pos": [
+        188.78,
+        602.17
+      ]
+    },
+    {
+      "id": "objectProperty11",
+      "iri": "http://visualdataweb.org/newOntology/Вивід_аудіо-даних",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Вивід аудіо-даних",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class6",
+      "range": "Class10",
+      "pos": [
+        307.04,
+        655.7
+      ]
+    },
+    {
+      "id": "datatypeProperty12",
+      "iri": "http://visualdataweb.org/newOntology/Вивід_текстових_даних",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Вивід текстових даних",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "Class6",
+      "range": "NodeId11",
+      "pos": [
+        -45.49,
+        829.33
+      ]
+    },
+    {
+      "id": "objectProperty15",
+      "iri": "http://visualdataweb.org/newOntology/Зв'язок_з_інтернетом",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Зв'язок з інтернетом",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class6",
+      "range": "Class12",
+      "pos": [
+        317.49,
+        826.54
+      ],
+      "pinned": true
+    },
+    {
+      "id": "objectProperty16",
+      "iri": "http://visualdataweb.org/newOntology/Подача_енергії",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Подача енергії",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class13",
+      "range": "Class12",
+      "pos": [
+        842.36,
+        805.69
+      ]
+    },
+    {
+      "id": "objectProperty17",
+      "iri": "http://visualdataweb.org/newOntology/Подача_енергіі",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Подача енергіі",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class13",
+      "range": "Class6",
+      "pos": [
+        596.76,
+        747.96
+      ]
+    },
+    {
+      "id": "objectProperty18",
+      "iri": "http://visualdataweb.org/newOntology/Поглинати_радіацію",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Поглинати радіацію",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class14",
+      "range": "Class5",
+      "pos": [
+        199.79,
+        110.89
+      ]
+    },
+    {
+      "id": "objectProperty19",
+      "iri": "http://visualdataweb.org/newOntology/Поливати",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Поливати",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class1",
+      "range": "Class14",
+      "pos": [
+        399.84,
+        10.81
+      ]
+    },
+    {
+      "id": "datatypeProperty20",
+      "iri": "http://visualdataweb.org/newOntology/Стояти",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Стояти",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "Class14",
+      "range": "NodeId15",
+      "pos": [
+        169.79,
+        -230.08
+      ]
+    },
+    {
+      "id": "objectProperty21",
+      "iri": "http://visualdataweb.org/newOntology/Заряджати",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Заряджати",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class13",
+      "range": "Class16",
+      "pos": [
+        951.72,
+        626.16
+      ]
+    },
+    {
+      "id": "objectProperty22",
+      "iri": "http://visualdataweb.org/newOntology/Зв'язок_із_світом",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Зв'язок із світом",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class1",
+      "range": "Class16",
+      "pos": [
+        679.32,
+        318.5
+      ]
+    },
+    {
+      "id": "objectProperty23",
+      "iri": "http://visualdataweb.org/newOntology/Світити",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Світити",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class17",
+      "range": "Class1",
+      "pos": [
+        783.01,
+        211.75
+      ]
+    },
+    {
+      "id": "objectProperty24",
+      "iri": "http://visualdataweb.org/newOntology/Подати_енергію",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Подавати енергію",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class13",
+      "range": "Class17",
+      "pos": [
+        1055.41,
+        519.42
+      ]
+    },
+    {
+      "id": "datatypeProperty25",
+      "iri": "http://visualdataweb.org/newOntology/Стоять",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Висіти",
+      "domain": "Class17",
+      "range": "NodeId18",
+      "pos": [
+        1105.41,
+        226.64
+      ]
+    },
+    {
+      "id": "objectProperty26",
+      "iri": "http://visualdataweb.org/newOntology/Слухати",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Слухати",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class1",
+      "range": "Class10",
+      "pos": [
+        559.52,
+        327.19
+      ]
+    },
+    {
+      "id": "objectProperty27",
+      "iri": "http://visualdataweb.org/newOntology/Вихід_в_інтернет",
+      "baseIri": "http://visualdataweb.org/newOntology/",
+      "label": "Вихід в інтернет",
+      "attributes": [
+        "object"
+      ],
+      "domain": "Class16",
+      "range": "Class12",
+      "pos": [
+        672.45,
+        704.74
+      ]
+    }
+  ]
+}
