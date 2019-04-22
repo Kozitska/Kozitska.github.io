@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Онтологія</title>
+
+<script type="text/javascript" src="https://www.google.com/jsapi">
+</script>
+
+</head>
+<body>
+	
+<script type="text/javascript">
+google.load("visualization", "1.1", 
+{packages:["wordtree"]});
+ google.setOnLoadCallback(drawChart);
+ function drawChart() {
+ var data = google.visualization.arrayToDataTable(
+ [ ['Фразы'],
+ ['Програміст робота_з_ПК зв*язок Wi-Fi_роутер'],
+ ['Програміст робота_з_ПК зв*язок Електроенергія'],
+ ['Програміст робота_з_ПК комплектуючі ввід_даних клавіатура'],
+ ['Програміст робота_з_ПК комплектуючі ввід_даних мишка'],
+ ['Програміст робота_з_ПК комплектуючі вивід_даних графічні_дані монітор'],
+ ['Програміст робота_з_ПК комплектуючі вивід_даних графічні_дані принтер'],
+ ['Програміст робота_з_ПК комплектуючі вивід_даних аудіо-дані навушники'],
+ ['Програміст робота_з_ПК комплектуючі вивід_даних аудіо-дані колонки'],
+ ['Програміст сидить на стільці '],
+ ['Програміст сидить за столом лежати смартфон'],
+ ['Програміст сидить за столом лежати книга'],
+  ['Програміст сидить за столом стояти лампа'],
+  ['Програміст сидить за столом стояти кактус поливати'],
+  ['Програміст сидить за столом стояти кактус поглинати_радіацію']]);
+
+var options = {
+	maxFontSize: 14,
+ 	wordtree: {
+ 		format: 'implicit',
+ 		word: 'Програміст'
+	 }
+ };
+ var chart = new google.visualization.WordTree
+(document.getElementById('wordtree_basic'));
+ chart.draw(data, options);
+ }
+</script>
+
+ <div id="wordtree_basic" style="
+ width: 100%; 
+ height: 1000px;">
+ </div>
+
+</body>
+</html>
